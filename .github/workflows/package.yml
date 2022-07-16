@@ -34,7 +34,7 @@ jobs:
           unzip bbdown.zip
           chmod +x BBDown
           mv BBDown bbdown-base/usr/bin/bbdown
-          ln bbdown-base/usr/bin/BBDown
+          ln -s bbdown-base/usr/bin/bbdown bbdown-base/usr/bin/BBDown
           wget https://raw.githubusercontent.com/hmsjy2017/bbdown-debs/main/controltemplate -O bbdown-base/DEBIAN/control
           sed -i "s/VTR/$version/" bbdown-base/DEBIAN/control
           chmod 755 bbdown-base/DEBIAN/*
